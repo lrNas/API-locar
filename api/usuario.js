@@ -1,4 +1,4 @@
-const {Usuario} = require('../models')
+const {Usuario, Cartao, Endereco, Locadora, Mensagem, Reserva, Status_Veiculo, Tipo_Usuario, Veiculo} = require('../models')
 module.exports = (app) =>{
 const getUsuario =  async (req, res) => {
     try {
