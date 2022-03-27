@@ -29,6 +29,21 @@ module.exports = (sequelize, DataType) => {
         Veiculo.belongsTo(modelsList.Status_Veiculo, {
             foreignKey: "fk_id_status"
         })
+        Veiculo.belongsToMany(modelsList.Usuario, {
+            through: modelsList.Reserva,
+            foreignKey: "fk_id_veiculo",
+            timestamps: false
+        })
+        Veiculo.belongsToMany(modelsList.Locadora, {
+            through: modelsList.Reserva,
+            foreignKey: "id_locadora_retirada",
+            timestamps: false
+        })
+        Veiculo.belongsToMany(modelsList.Locadora, {
+            through: modelsList.Reserva,
+            foreignKey: "id_locadora_devolucao",
+            timestamps: false
+        })
 
     }        
 

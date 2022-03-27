@@ -25,6 +25,16 @@ module.exports = (sequelize, DataType) => {
     Locadora.hasMany(modelsList.Veiculo, {
         foreignKey: "id_locadora_atual"
     })
+    Locadora.belongsToMany(modelsList.Veiculo, {
+        through: modelsList.Reserva,
+        foreignKey: "id_locadora_retirada",
+        timestamps: false
+    })
+    Locadora.belongsToMany(modelsList.Veiculo, {
+        through: modelsList.Reserva,
+        foreignKey: "id_locadora_devolucao",
+        timestamps: false
+    })
     }
 
     

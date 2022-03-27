@@ -12,7 +12,7 @@ module.exports = (sequelize, DataType) => {
         fk_id_veiculo: DataType.INTEGER,
         fk_id_usuario: DataType.INTEGER,
         id_locadora_retirada: DataType.INTEGER,
-        id_locadora_devolucao: DataType.INTEGER,
+        id_locadora_devolucao: DataType.INTEGER
     }, {
         timestamps: false,
         tableName: 'reserva'
