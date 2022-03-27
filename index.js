@@ -3,6 +3,7 @@ const app = express()
 const consign = require('consign')
 
 app.use(express.json())
+
 consign()
     .include('./api')
     .then('./routes')

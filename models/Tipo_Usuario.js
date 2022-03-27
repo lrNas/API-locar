@@ -11,6 +11,11 @@ module.exports = (sequelize, DataType) => {
         tableName: 'tipo_usuario'
     })
 
-
+    Tipo_Usuario.associate = (modelsList) => {
+        Tipo_Usuario.hasMany(modelsList.Usuario, {
+            foreignKey: "fk_id_tipo_usuario"
+        })
+    }    
+    
     return Tipo_Usuario
 }

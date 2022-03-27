@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataType) => {
     const Reserva = sequelize.define('Reserva', {
-        id_usuario: {
+        id_reserva: {
             type: DataType.INTEGER,
             primaryKey: true,
             autoincrement: true

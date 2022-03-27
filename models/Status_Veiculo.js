@@ -12,6 +12,13 @@ module.exports = (sequelize, DataType) => {
         tableName: 'status_veiculo'
     })
     
+
+    Status_Veiculo.associate = (modelsList) => {
+    Status_Veiculo.hasMany(modelsList.Veiculos, {
+        foreignKey: "fk_id_status"
+    })}
+
+    
     return Status_Veiculo
 
 }

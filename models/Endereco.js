@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataType) => {
     const Endereco = sequelize.define('Endereco', {
-        id_usuario: {
+        id_endereco: {
             type: DataType.INTEGER,
             primaryKey: true,
             autoincrement: true
@@ -14,7 +14,11 @@ module.exports = (sequelize, DataType) => {
         timestamps: false,
         tableName: 'endereco'
     })
-
+    
+    Endereco.associate = (modelsList) => {
+        Endereco.belongsTo(modelsList.Usuario, {
+            foreignKey: "fk_id_endereco"
+        })}
     
     return Endereco
 }

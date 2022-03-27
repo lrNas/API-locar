@@ -15,6 +15,18 @@ module.exports = (sequelize, DataType) => {
         tableName: 'locadora'
     })
 
+    Locadora.associate = (modelsList) => {
+    Locadora.hasOne(modelsList.Endereco, {
+        foreignKey: "fk_id_endereco"
+    })
+    Locadora.hasMany(modelsList.Veiculo, {
+        foreignKey: "id_locadora_proprietaria"
+    })
+    Locadora.hasMany(modelsList.Veiculo, {
+        foreignKey: "id_locadora_atual"
+    })
+    }
+
     
     return Locadora
 }

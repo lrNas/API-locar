@@ -5,7 +5,6 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoincrement: true
         },
-        fk_id_tipo_usuario: DataType.INTEGER,
         modelo_veiculo: DataType.STRING,
         placa_veiculo: DataType.STRING,
         km_rodados_veiculo: DataType.STRING,
@@ -19,6 +18,19 @@ module.exports = (sequelize, DataType) => {
         timestamps: false,
         tableName: 'veiculo'
     })
+
+    Veiculo.associate = (modelsList) => {
+        Veiculo.belongsTo(modelsList.Locadora, {
+            foreignKey: "id_locadora_proprietaria"
+        })
+        Veiculo.belongsTo(modelsList.Locadora, {
+            foreignKey: "id_locadora_atual"
+        })
+        Veiculo.belongsTo(modelsList.Status_Veiculo, {
+            foreignKey: "fk_id_status"
+        })
+
+    }        
 
 
     return Veiculo
