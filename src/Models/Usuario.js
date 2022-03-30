@@ -27,17 +27,13 @@ const Usuario = sequelize.define("usuario",{
         type:Sequelize.STRING(20),
         allowNull:false
     },
-    cpf: {
-        type:Sequelize.STRING(20),
-        allowNull:false
-    },
     telefone: {
         type:Sequelize.STRING(20),
         allowNull:false
     }
     ,
     data_nascimento: {
-        type:Sequelize.STRING(20),
+        type:Sequelize.DATE,
         allowNull:false
     },
     cnh: {
@@ -45,7 +41,7 @@ const Usuario = sequelize.define("usuario",{
         allowNull:false
     },
     validade_cnh: {
-        type:Sequelize.STRING(20),
+        type:Sequelize.DATE,
         allowNull:false
     }
 })

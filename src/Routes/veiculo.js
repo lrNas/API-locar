@@ -45,8 +45,8 @@ router.post("/veiculo", (req, res) => {
             km_rodados : req.body.km_rodados,
             custo_diaria : req.body.custo_diaria,
             renavam : req.body.renavam,
-            fk_id_locadora_proprietaria : req.body.locadora_proprietaria,
-            fk_id_locadora_atual : req.body.locadora_atual,
+            fk_id_locadora_proprietaria : req.body.id_locadora_proprietaria,
+            fk_id_locadora_atual : req.body.id_locadora_atual,
             fk_id_status_veiculo: req.body.id_status_veiculo
         },
         "create"
@@ -60,9 +60,9 @@ router.post("/veiculo", (req, res) => {
 });
 
 
-router.put("/endereco", (req, res) => {
+router.put("/veiculo", (req, res) => {
         
-        crud("endereco",   
+        crud("veiculo",   
         [
             {
                 modelo: req.body.modelo,
@@ -70,8 +70,8 @@ router.put("/endereco", (req, res) => {
                 km_rodados : req.body.km_rodados,
                 custo_diaria : req.body.custo_diaria,
                 renavam : req.body.renavam,
-                fk_id_locadora_proprietaria : req.body.locadora_proprietaria,
-                fk_id_locadora_atual : req.body.locadora_atual,
+                fk_id_locadora_proprietaria : req.body.id_locadora_proprietaria,
+                fk_id_locadora_atual : req.body.id_locadora_atual,
                 fk_id_status_veiculo: req.body.id_status_veiculo
             },
             {where: { id: req.body.id}}

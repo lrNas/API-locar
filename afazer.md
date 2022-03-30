@@ -5,3 +5,4 @@
 -melhorar o sistema de mensagens
 -api key
 -status_reserva
+-funções de contagem

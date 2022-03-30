@@ -9,8 +9,7 @@ router.get("/cartao/usuario/:id", (req, res) => {
             where: {
                 fk_id_usuario: req.params.id_usuario
             }
-        },
-        "request"
+        },"request"
     )
     .then(data=>res.status(200).json(data)
     )

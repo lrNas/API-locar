@@ -13,7 +13,7 @@ const crud = async(model,values,action) =>{
 
     return myPromisse = new Promise((resolve,reject)=>{
         (async()=>{
-            await database.sync()  
+            await database.sync();  
             let Model
             
             switch (model){
