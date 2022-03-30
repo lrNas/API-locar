@@ -9,15 +9,12 @@ const Reserva = sequelize.define("reservas",{
     },
     valor: {
         type:Sequelize.DECIMAL(20),
-        allowNull:false
     },
     data_retirada: {
         type:Sequelize.DATE,
-        allowNull:false
     },
     data_entrega: {
         type:Sequelize.DATE,
-        allowNull:false
     }
 }
 )

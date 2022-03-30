@@ -11,23 +11,18 @@ const Veiculo = sequelize.define("veiculos",{
     },
     modelo: {
         type:Sequelize.STRING(20),
-        allowNull:false
     },
     placa: {
         type:Sequelize.STRING(100),
-        allowNull:false
     },
     km_rodados: {
         type:Sequelize.STRING(20),
-        allowNull:false
     },
     custo_diaria: {
         type:Sequelize.STRING(20),
-        allowNull:false
     },
     renavam: {
         type:Sequelize.STRING(20),
-        allowNull:false
     }
 }
 );

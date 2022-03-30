@@ -9,19 +9,15 @@ const CreditCard = sequelize.define("creditcards",{
     },
     nome: {
         type:Sequelize.STRING(50),
-        allowNull:false
     },
     numero: {
         type:Sequelize.STRING(20),
-        allowNull:false
     },
     validade: {
         type:Sequelize.DATE,
-        allowNull:false
     },
     cvc: {
         type:Sequelize.INTEGER(4),
-        allowNull:false
     }
 })
     
