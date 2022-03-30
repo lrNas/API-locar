@@ -1,0 +1,8 @@
+-Normalizar dados (deixar espaço somente para caracteres necessários, limitando o tamanho dos campos)
+-Complemento não é NOT NULL
+-armazenar hash de senha com sal em vez de senha
+-Em vez de deletar, usar "deletedAt" (modo paranoid)
+-melhorar o sistema de mensagens
+-api key
+-status_reserva
+-funções de contagem

@@ -1,0 +1,332 @@
+####Possíveis requisições para tipo (Não é permitido deletar um tipo de usuário)
+POST http://localhost:3030/tipo
+Content-Type: application/json
+
+{
+    "descricao":"Administrador"
+}
+
+#############
+
+GET http://localhost:3030/tipo/1
+Content-Type: application/json
+
+#############
+
+PUT http://localhost:3030/tipo
+Content-Type: application/json
+
+{
+    "id":1,
+    "descricao":"Usuário"
+}
+
+###########################
+
+
+
+####Possíveis requisições para endereço (Não é permitido deletar um endereço)
+POST http://localhost:3030/endereco
+Content-Type: application/json
+
+{
+"cep":"02341-123",
+"logadouro":"Rua das felicidades, 1",
+"complemento":"Apartamento 1",
+"estado" :"São Paulo",
+"cidade":"São Paulo"
+}
+
+# /*
+# "id_usuario":1
+# "id_locadora":1
+# Incluir FK somente da entidade a qual pertence o endereço*/   
+#############
+
+GET http://localhost:3030/endereco/1
+Content-Type: application/json
+
+#############
+
+PUT http://localhost:3030/endereco
+Content-Type: application/json
+
+{
+"id":1,
+"cep":"02341-153",
+"logadouro":"Rua das Superações, 1",
+"complemento":"Apartamento 1",
+"estado" :"São Paulo",
+"cidade":"São Paulo"  
+}
+
+###########################
+
+
+
+####Possíveis requisições para mensagem (Não é permitido alterar uma mensagem)
+POST http://localhost:3030/mensagem
+Content-Type: application/json
+
+{
+"nome_completo":"Carinha que mora logo ali",
+"email":"sucodefruta@badstyle.com",
+"conteudo":"Hey, me passa um dolar!"
+}
+
+#############
+
+GET http://localhost:3030/mensagem/1
+Content-Type: application/json
+
+#############
+
+GET http://localhost:3030/mensagem
+Content-Type: application/json
+
+#############
+DELETE  http://localhost:3030/mensagem
+Content-Type: application/json
+
+{
+"id":1
+}
+###########################
+
+####Possíveis requisições para Status de veículo (Não é permitido deletar um tipo de status)
+POST http://localhost:3030/status
+Content-Type: application/json
+
+{
+    "descricao":"Alugado"
+}
+
+#############
+
+GET http://localhost:3030/status/1
+Content-Type: application/json
+
+#############
+
+GET http://localhost:3030/status/
+Content-Type: application/json
+
+#############
+PUT http://localhost:3030/status
+Content-Type: application/json
+
+{
+    "id":1,
+    "descricao":"Disponível"
+}
+
+###########################
+
+
+
+####Possíveis requisições para Locadora
+POST http://localhost:3030/locadora
+Content-Type: application/json
+
+{
+"nome":"Ag. 01 - SP",
+"email":"ag01sp@locar.com",
+"cnpj":"00000000000000",
+"telefone" :"21 55322342"
+}
+
+#############
+
+GET http://localhost:3030/locadora/1
+Content-Type: application/json
+
+#############
+
+GET http://localhost:3030/locadora
+Content-Type: application/json
+
+#############
+
+PUT http://localhost:3030/locadora
+Content-Type: application/json
+
+{
+    "id":1,
+
+
+}
+
+###########################
+
+DELETE  http://localhost:3030/locadora
+Content-Type: application/json
+
+{
+    "id":1
+}
+##############################
+
+
+
+####Possíveis requisições para veiculo
+POST http://localhost:3030/veiculo
+Content-Type: application/json
+
+{
+"modelo": "Uno de firma",
+            "placa" : "MAD-8012",
+            "km_rodados" : 280,
+            "custo_diaria" : 20,
+            "renavam" : "56778776565",
+            "id_locadora_proprietaria" : 1,
+            "id_locadora_atual" : 1,
+            "id_status_veiculo": 1
+}
+#############
+
+
+GET http://localhost:3030/veiculo/1
+Content-Type: application/json
+
+#############
+
+
+GET http://localhost:3030/veiculo
+Content-Type: application/json
+
+#############
+
+PUT http://localhost:3030/veiculo
+Content-Type: application/json
+
+{
+    "id":1,
+    "modelo": "Uno de firma 1",
+    "placa" : "MAD-8012",
+    "km_rodados" : 280,
+    "custo_diaria" : 20,
+    "renavam" : "56778776565",
+    "id_locadora_proprietaria" : 1,
+    "id_locadora_atual" : 1,
+    "id_status_veiculo": 1
+}
+
+###########################
+
+
+
+
+
+
+####Possíveis requisições para Usuario
+POST http://localhost:3030/usuario
+Content-Type: application/json
+
+{
+                "nome_completo": "Carinha",
+            "email": "email@email.com",
+            "senha": "senha",
+            "cpf": "00000000000",
+            "telefone": "1123320232",
+            "data_nascimento": "2022-03-28T23:08:13.145Z",
+            "cnh": "001241241241243",
+            "validade_cnh": "2022-03-28T23:08:13.145Z",
+            "fk_id_tipo_usuario" : 1
+}
+
+#############
+
+
+GET http://localhost:3030/reserva/usuario/1
+Content-Type: application/json
+
+#############
+
+
+GET http://localhost:3030/reserva/3
+Content-Type: application/json
+
+#############
+
+GET http://localhost:3030/reserva
+Content-Type: application/json
+
+#############
+
+PUT http://localhost:3030/locadora
+Content-Type: application/json
+
+{
+    "id":1,
+"nome":"Ag. 01 - SP",
+"email":"ag01sp@locar.com",
+"cnpj":"00.000.000/0000-00",
+"telefone" :"11 55882342"
+}
+
+###########################
+
+
+
+
+
+
+####Possíveis requisições para Reserva
+POST http://localhost:3030/reserva
+Content-Type: application/json
+
+{
+    "id_veiculo": 1,
+    "id_usuario": 1,
+    "id_locadora_retirada":1,
+    "id_locadora_entrega": 1,
+    "data_retirada":  "2022-03-28T23:08:13.145Z",
+    "data_entrega": "2022-04-29T23:08:13.145Z",
+    "valor": 3200.21
+}
+
+#############
+
+
+GET http://localhost:3030/reserva/usuario/1
+Content-Type: application/json
+
+#############
+
+
+GET http://localhost:3030/reserva/3
+Content-Type: application/json
+
+#############
+
+GET http://localhost:3030/reserva
+Content-Type: application/json
+
+#############
+
+PUT http://localhost:3030/locadora
+Content-Type: application/json
+
+{
+    "id":1,
+"nome":"Ag. 01 - SP",
+"email":"ag01sp@locar.com",
+"cnpj":"00.000.000/0000-00",
+"telefone" :"11 55882342"
+}
+
+###########################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
