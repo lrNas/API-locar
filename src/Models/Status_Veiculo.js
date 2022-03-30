@@ -9,7 +9,6 @@ const Status_Veiculo = sequelize.define("status_veiculos",{
     },
     descricao: {
         type:Sequelize.STRING(20),
-        allowNull:false
     }
 }
 )

@@ -12,19 +12,15 @@ const Locadora = sequelize.define("locadoras",{
     },
     nome: {
         type:Sequelize.STRING(20),
-        allowNull:false
     },
     email: {
         type:Sequelize.STRING(50),
-        allowNull:false
     },
     cnpj: {
         type:Sequelize.STRING(20),
-        allowNull:false
     },
     telefone: {
         type:Sequelize.STRING(20),
-        allowNull:false
     }
 }
 );

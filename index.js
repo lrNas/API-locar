@@ -1,5 +1,6 @@
 const express = require("express");
 const requestBody = require("./src/Middlewares/requestbody");
+const validaCnh = require("./src/Middlewares/validaCnh");
 const app = express();
 const endereco = require("./src/Routes/endereco");
 const mensagem = require("./src/Routes/mensagem");
@@ -11,6 +12,7 @@ const reserva = require( "./src/Routes/reserva");
 const usuario = require( "./src/Routes/usuario");
 
 app.use(requestBody);
+app.use(validaCnh);
 app.use(express.json());
 app.use(tipo);
 app.use(endereco);
