@@ -1,8 +1,10 @@
 -Normalizar dados (deixar espaço somente para caracteres necessários, limitando o tamanho dos campos)
+-Corrigir http status e json enviados pela resposta
 -Complemento não é NOT NULL
 -armazenar hash de senha com sal em vez de senha
--Em vez de deletar, usar "deletedAt" (modo paranoid)
--melhorar o sistema de mensagens
+-Em vez de deletar, usar "deletedAt" (modo paranoid do sequelize)
+-criar retorno de erro quando request vier vazia
 -api key
--status_reserva
--funções de contagem
+-conceituar a tabela status_reserva (porque precisamos saber se ela foi cancelada, finalizada, antecipada etc)
+-funções de contagem para admin overview
+-arquivo .env 

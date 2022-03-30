@@ -49,6 +49,7 @@ router.post("/mensagem", (req, res) => {
         res.status(400).json(err)
     })
 });
+// O método delete recebe somente o parãmetro where
 
 router.delete("/mensagem", (req, res) => {
         

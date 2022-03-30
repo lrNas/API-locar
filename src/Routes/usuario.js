@@ -1,7 +1,14 @@
+// Requer o express, cria o router para essa classe
 const express = require('express')
 const router = express.Router()
+
+// Requer o controller Crud (abra-o, está comentado), para utilizar como método
 const crud = require("../Controllers/crud")
 
+
+//Define que a rota get vai executar o método crud com os parâmetros informados. 
+// Em caso de dúvida, leia o arquivo crud em Controllers/crud para saber como ele funciona.
+// os parâmetros que serão passados são obtidos na request.
 router.get("/usuario/:id", (req, res) => {
     crud("usuario",   
         {
@@ -11,14 +18,19 @@ router.get("/usuario/:id", (req, res) => {
         },
         "usuario"
     )
-    .then(data=>res.status(200).json(data)
+    .then(
+        data=>res.status(200).json(data)
+        // Após executar o método crud, retorna o Status e os dados que ele retornou.
     )
     .catch(err=>
         {
             res.status(400).json(err)
+        // Se acontece algum erro, retorna o json de erros com o status de erro.
+
         })
 });
 
+//Outro get, funciona como o acima
 router.get("/usuario", (req, res) => {
     crud("usuario",   
         {},
@@ -31,7 +43,7 @@ router.get("/usuario", (req, res) => {
             res.status(400).json(err)
         })
 });
-
+//O post também funciona como o get, mas possui mais parâmetros.
 router.post("/usuario", (req, res) => {
     crud("usuario",   
         {
@@ -55,7 +67,10 @@ router.post("/usuario", (req, res) => {
     })
 });
 
-
+//O put também funciona como o get, mas possui mais parâmetros, e em vez de receber um objeto, recebe um array de objetos.
+// o primeiro objeto desse array é o body, e o segundo é um objeto com detalhes da solicitação para o sequelize.
+// Caso dúvida, busque sequelize.put na documentação do sequelize.
+// O método delete é semelhante. Há uma referência em Routes/mensagem
 router.put("/usuario", (req, res) => {
         
         crud("usuario",   
