@@ -1,7 +1,7 @@
-const express = require('express')
-const router = express.Router()
-const crud = require("../Controllers/crud")
-
+const express = require('express');
+const router = express.Router();
+const crud = require("../Controllers/crud");
+const auth = require("../Middlewares/auth");
 
 router.get("/endereco/:id", (req, res) => {
     crud("endereco",   
@@ -42,7 +42,7 @@ router.post("/endereco", (req, res) => {
     })
 });
 
-router.put("/endereco", (req, res) => {
+router.put("/endereco",auth, (req, res) => {
         
         crud("endereco",   
         [

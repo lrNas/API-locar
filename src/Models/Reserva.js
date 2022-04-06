@@ -16,7 +16,10 @@ const Reserva = sequelize.define("reservas",{
     data_entrega: {
         type:Sequelize.DATE,
     }
-}
+}, {
+    sequelize,
+    paranoid: true,
+  }
 )
 
 module.exports = Reserva;

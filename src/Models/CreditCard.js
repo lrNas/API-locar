@@ -19,6 +19,9 @@ const CreditCard = sequelize.define("creditcards",{
     cvc: {
         type:Sequelize.INTEGER(4),
     }
-})
+}, {
+    sequelize,
+    paranoid: true,
+  })
     
 module.exports = CreditCard;

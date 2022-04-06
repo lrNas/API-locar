@@ -11,6 +11,7 @@ const Reserva = require("../Models/Reserva");
 const Status_Veiculo = require("../Models/Status_Veiculo");
 const Usuario = require("../Models/Usuario");
 const Veiculo = require("../Models/Veiculo");
+const Auth = require("../Models/Auth");
 
 
 /** inicia o método assíncrono crud. Assincrono significa que ele espera cada finalização para fazer a próxima */
@@ -55,7 +56,10 @@ const crud = async(model,values,action) =>{
                     break; 
                 case "veiculo":
                     Model = Veiculo;
-                    break;    
+                    break;
+                case "auth":
+                    Model = Auth;
+                    break;        
                 default:
                     /* Tratar adequadamente */
                     reject("Modelo inválido")

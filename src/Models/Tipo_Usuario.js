@@ -11,6 +11,9 @@ const Tipo_Usuario = sequelize.define("tipo_usuarios",{
         type:Sequelize.STRING(100),
         allowNull:false
     }
-})
+}, {
+    sequelize,
+    paranoid: true,
+  })
 
 module.exports = Tipo_Usuario;

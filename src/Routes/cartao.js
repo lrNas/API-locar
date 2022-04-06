@@ -1,9 +1,11 @@
-const express = require('express')
-const router = express.Router()
-const crud = require("../Controllers/crud")
+const express = require('express');
+const router = express.Router();
+const crud = require("../Controllers/crud");
 
+/* Instancia o middleware auth, que checa se o token enviado existe na base de dados */
+const auth = require("../Middlewares/auth");
 
-router.get("/cartao/usuario/:id", (req, res) => {
+router.get("/cartao/usuario/:id",auth, (req, res) => {
     crud("cartao",   
         {
             where: {
@@ -40,7 +42,7 @@ router.post("/cartao", (req, res) => {
     })
 });
 
-router.put("/cartao", (req, res) => {
+router.put("/cartao",auth, (req, res) => {
         
         crud("cartao",   
         [

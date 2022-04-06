@@ -6,7 +6,9 @@ app.use(express.json());
 const requestBody = require("./src/Middlewares/requestbody");
 app.use(requestBody);
 
+
 /* Instancia e aplica ao app as rotas para cada controller. Vide Routes/usuario.js, essa rota estará comentada. */
+const login = require("./src/Routes/login");
 const endereco = require("./src/Routes/endereco");
 const mensagem = require("./src/Routes/mensagem");
 const veiculo = require("./src/Routes/veiculo");
@@ -15,6 +17,7 @@ const status = require( "./src/Routes/status");
 const locadora = require( "./src/Routes/locadora");
 const reserva = require( "./src/Routes/reserva");
 const usuario = require( "./src/Routes/usuario");
+app.use(login);
 app.use(endereco);
 app.use(mensagem);
 app.use(veiculo);

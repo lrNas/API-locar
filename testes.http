@@ -1,14 +1,25 @@
+############# Login
+
+GET http://localhost:3030/login
+Content-Type: application/json
+
+{
+    "email": "email@email.com",
+    "senha": "senha"
+}
+
 ####Possíveis requisições para tipo (Não é permitido deletar um tipo de usuário)
 POST http://localhost:3030/tipo
 Content-Type: application/json
 
 {
+    "token":"6aebac00-b54a-11ec-82bc-5db84a15d9eb",
     "descricao":"Administrador"
 }
 
 #############
 
-GET http://localhost:3030/tipo/1
+GET http://localhost:3030/tipo/2
 Content-Type: application/json
 
 #############
@@ -236,9 +247,29 @@ Content-Type: application/json
 
 #############
 
+PUT http://localhost:3030/usuario
+Content-Type: application/json
+
+{
+    "id":1,
+            "nome_completo": "Carinha",
+            "email": "email@email.com",
+            "senha": "senha",
+            "cpf": "00000000000",
+            "telefone": "1123320232",
+            "data_nascimento": "2022-03-28T23:08:13.145Z",
+            "cnh": "001241241241243",
+            "validade_cnh": "2022-03-28T23:08:13.145Z",
+            "fk_id_tipo_usuario" : 1
+}
+
+#############
+
+
 
 GET http://localhost:3030/reserva/usuario/1
 Content-Type: application/json
+
 
 #############
 
@@ -316,9 +347,6 @@ Content-Type: application/json
 }
 
 ###########################
-
-
-
 
 
 

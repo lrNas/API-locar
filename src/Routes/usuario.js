@@ -2,9 +2,11 @@
 const express = require('express')
 const router = express.Router()
 
+// Requer bcrypt para armazenar somente hash de senha
+const bcrypt = require("bcrypt")
+
 // Requer o controller Crud (abra-o, está comentado), para utilizar como método
 const crud = require("../Controllers/crud")
-
 
 //Define que a rota get vai executar o método crud com os parâmetros informados. 
 // Em caso de dúvida, leia o arquivo crud em Controllers/crud para saber como ele funciona.
@@ -49,7 +51,7 @@ router.post("/usuario", (req, res) => {
         {
             nome_completo: req.body.nome_completo,
             email: req.body.email,
-            senha: req.body.senha,
+            senha: bcrypt.hashSync(req.body.senha,Math.round(Math.random()*15)),
             cpf: req.body.cpf,
             telefone: req.body.telefone,
             data_nascimento: req.body.data_nascimento,
@@ -78,7 +80,7 @@ router.put("/usuario", (req, res) => {
             {
                 nome_completo: req.body.nome_completo,
                 email: req.body.email,
-                senha: req.body.senha,
+                senha: bcrypt.hashSync(req.body.senha,Math.round(Math.random()*15)),
                 cpf: req.body.cpf,
                 telefone: req.body.telefone,
                 data_nascimento: req.body.data_nascimento,
@@ -99,4 +101,6 @@ router.put("/usuario", (req, res) => {
     });
 
     
+
+
 module.exports = router

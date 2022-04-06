@@ -22,7 +22,10 @@ const Locadora = sequelize.define("locadoras",{
     telefone: {
         type:Sequelize.STRING(20),
     }
-}
+}, {
+    sequelize,
+    paranoid: true,
+  }
 );
 
 Locadora.hasOne(Location,{

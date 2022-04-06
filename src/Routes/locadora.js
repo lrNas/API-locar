@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const crud = require("../Controllers/crud")
+const auth = require("../Middlewares/auth");
 
 
 router.get("/locadora/:id", (req, res) => {
@@ -37,7 +38,7 @@ router.get("/locadora", (req, res) => {
 
 
 
-router.post("/locadora", (req, res) => {
+router.post("/locadora",auth, (req, res) => {
     crud("locadora",   
         {
             nome: req.body.nome,
@@ -56,7 +57,7 @@ router.post("/locadora", (req, res) => {
 });
 
 
-router.put("/locadora", (req, res) => {
+router.put("/locadora",auth, (req, res) => {
         
         crud("locadora",   
         [
@@ -79,7 +80,7 @@ router.put("/locadora", (req, res) => {
     });
 
 
-    router.delete("/locadora", (req, res) => {
+    router.delete("/locadora",auth, (req, res) => {
         
         crud("locadora",   
         

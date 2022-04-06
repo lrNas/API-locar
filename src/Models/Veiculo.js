@@ -40,6 +40,10 @@ Veiculo.belongsTo(Status_Veiculo,{
     onDelete:"cascade",
     sourceKey:"id",
     foreignKey:{name:"fk_id_status_veiculo",field:"fk_id_status_veiculo"}
-})
+}, {
+    sequelize,
+    paranoid: true,
+  }
+)
     
 module.exports = Veiculo;

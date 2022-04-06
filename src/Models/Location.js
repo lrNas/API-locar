@@ -20,7 +20,10 @@ const Location = sequelize.define("locations",{
     cidade: {
         type:Sequelize.STRING(20),
     }
-}
+}, {
+    sequelize,
+    paranoid: true,
+  }
 )
     
 module.exports = Location;

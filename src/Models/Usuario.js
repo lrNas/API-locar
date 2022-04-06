@@ -6,6 +6,7 @@ const Tipo_Usuario = require("./Tipo_Usuario");
 const Location = require("./Location");
 const Reserva = require("./Reserva");
 const Cartao = require("./CreditCard");
+const Auth = require("./Auth");
 
 //importa o conector, que é o banco de dados onde todas as ações serão realizadas.
 const sequelize = require("../Controllers/connector");
@@ -26,9 +27,10 @@ const Usuario = sequelize.define("usuarios",{
     },
     email: {
         type:Sequelize.STRING(100),
+        unique:true
     },
     senha: {
-        type:Sequelize.STRING(20),
+        type:Sequelize.STRING(65),
     },
     cpf: {
         type:Sequelize.STRING(20),
@@ -87,5 +89,17 @@ const Usuario = sequelize.define("usuarios",{
         sourceKey:"id",
         foreignKey:{name:"fk_id_usuario",field:"fk_id_usuario"}
     })
+
+    Usuario.hasMany(Auth,{
+        as:"Auth",
+        onDelete:"cascade",
+        sourceKey:"id",
+        foreignKey:{name:"fk_id_usuario",field:"fk_id_usuario"}
+    }, {
+        sequelize,
+        paranoid: true,
+      }
+    )
+
 
 module.exports = Usuario;

@@ -4,18 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node .",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "consign": "^0.1.6",
     "express": "^4.17.3",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
-    "sequelize": "^6.17.0"
+    "sequelize": "^6.17.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "sequelize-cli": "^6.4.1"
