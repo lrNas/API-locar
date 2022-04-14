@@ -8,3 +8,4 @@
 -conceituar a tabela status_reserva (porque precisamos saber se ela foi cancelada, finalizada, antecipada etc)
 -funções de contagem para admin overview
 -arquivo .env 
+-Implementar JWT
