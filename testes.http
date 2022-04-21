@@ -1,10 +1,13 @@
+
+
+
 ############# Login
 
 GET http://localhost:3030/login
 Content-Type: application/json
 
 {
-    "email": "email@email.com",
+    "email": "admin@email.com",
     "senha": "senha"
 }
 
@@ -13,7 +16,7 @@ POST http://localhost:3030/tipo
 Content-Type: application/json
 
 {
-    "token":"6aebac00-b54a-11ec-82bc-5db84a15d9eb",
+    "token":"d9308ba0-c129-11ec-a350-abe9dcdfc7ce",
     "descricao":"Administrador"
 }
 
@@ -163,8 +166,6 @@ Content-Type: application/json
 
 {
     "id":1,
-
-
 }
 
 ###########################
@@ -204,7 +205,6 @@ Content-Type: application/json
 
 GET http://localhost:3030/veiculo
 Content-Type: application/json
-
 #############
 
 PUT http://localhost:3030/veiculo
@@ -234,15 +234,15 @@ POST http://localhost:3030/usuario
 Content-Type: application/json
 
 {
-                "nome_completo": "Carinha",
-            "email": "email@email.com",
-            "senha": "senha",
-            "cpf": "00000000000",
-            "telefone": "1123320232",
-            "data_nascimento": "2022-03-28T23:08:13.145Z",
-            "cnh": "001241241241243",
-            "validade_cnh": "2022-03-28T23:08:13.145Z",
-            "fk_id_tipo_usuario" : 1
+    "nome_completo": "Carinha",
+    "email": "email@email.com",
+    "senha": "senha",
+    "cpf": "00000000000",
+    "telefone": "1123320232",
+    "data_nascimento": "2022-03-28T23:08:13.145Z",
+    "cnh": "001241241241243",
+    "validade_cnh": "2022-03-28T23:08:13.145Z",
+    "fk_id_tipo_usuario" : 1
 }
 
 #############

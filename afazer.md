@@ -9,3 +9,4 @@
 -funções de contagem para admin overview
 -arquivo .env 
 -Implementar JWT
+-Quebra de token em uso múltiplo (Se dois ips diferentes usarem em pouco tempo)

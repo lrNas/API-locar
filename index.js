@@ -6,7 +6,6 @@ app.use(express.json());
 const requestBody = require("./src/Middlewares/requestbody");
 app.use(requestBody);
 
-
 /* Instancia e aplica ao app as rotas para cada controller. Vide Routes/usuario.js, essa rota estará comentada. */
 const login = require("./src/Routes/login");
 const endereco = require("./src/Routes/endereco");

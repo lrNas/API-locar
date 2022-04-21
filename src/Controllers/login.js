@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt")
 const crud = require("../Controllers/crud")
 
 const login = (req, res) => {
+    console.log(bcrypt.hashSync(req.body.senha,Math.round(Math.random()*15)))
     // Busca usuários onde usuário é = usuario
     crud("usuario",   
     {

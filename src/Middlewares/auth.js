@@ -6,11 +6,11 @@ const auth = (req, res, next) => {
     .then(
         data=>{
             if(data.length==1){
+                req.auth = data[0].toJSON();
+                console.log(req.auth)
                 next();
-                // Verificar além de se o token existe, se ele é do usuário que o enviou.
             }
             else{
-
                 res.status(400).json({message:"Autenticador inválido."})
             }
         }
