@@ -7,6 +7,8 @@
 -api key
 -conceituar a tabela status_reserva (porque precisamos saber se ela foi cancelada, finalizada, antecipada etc)
 -funções de contagem para admin overview
--arquivo .env 
 -Implementar JWT
 -Quebra de token em uso múltiplo (Se dois ips diferentes usarem em pouco tempo)
+https://www.luiztools.com.br/post/tutorial-de-migrations-com-nodejs-e-sequelize/
+{-Migration de instanciação
+-arquivo .env }
