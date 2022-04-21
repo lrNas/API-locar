@@ -37,6 +37,7 @@ router.get("/reserva/:id",auth, (req, res) => {
             res.status(400).json(err)
         })
 });
+
 router.get("/reserva", (req, res) => {
     crud("reserva",   
         {},
