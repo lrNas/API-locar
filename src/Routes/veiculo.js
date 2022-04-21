@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const crud = require("../Controllers/crud")
-
+const auth = require("../Middlewares/auth");
 
 router.get("/veiculo/:id", (req, res) => {
     crud("veiculo",   
@@ -20,7 +20,6 @@ router.get("/veiculo/:id", (req, res) => {
         })
 });
 
-
 router.get("/veiculo", (req, res) => {
     crud("veiculo",   
         {},
@@ -37,7 +36,7 @@ router.get("/veiculo", (req, res) => {
 
 
 
-router.post("/veiculo", (req, res) => {
+router.post("/veiculo",auth, (req, res) => {
     crud("veiculo",   
         {
             modelo: req.body.modelo,
@@ -60,7 +59,7 @@ router.post("/veiculo", (req, res) => {
 });
 
 
-router.put("/veiculo", (req, res) => {
+router.put("/veiculo",auth, (req, res) => {
         
         crud("veiculo",   
         [

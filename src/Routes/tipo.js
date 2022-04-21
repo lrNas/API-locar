@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const crud = require("../Controllers/crud")
+const auth = require("../Middlewares/auth");
 
 
 router.get("/tipo/:id", (req, res) => {
@@ -21,7 +22,7 @@ router.get("/tipo/:id", (req, res) => {
 });
 
 
-router.post("/tipo", (req, res) => {
+router.post("/tipo",auth, (req, res) => {
     crud("tipo",   
     
         {
@@ -37,7 +38,7 @@ router.post("/tipo", (req, res) => {
     })
 });
 
-router.put("/tipo", (req, res) => {
+router.put("/tipo",auth, (req, res) => {
         
         crud("tipo",   
         [

@@ -2,6 +2,9 @@
 const express = require('express')
 const router = express.Router()
 
+//Requer o middleware de autenticação
+const auth = require("../Middlewares/auth");
+
 // Requer bcrypt para armazenar somente hash de senha
 const bcrypt = require("bcrypt")
 
@@ -33,7 +36,7 @@ router.get("/usuario/:id", (req, res) => {
 });
 
 //Outro get, funciona como o acima
-router.get("/usuario", (req, res) => {
+router.get("/usuario",auth, (req, res) => {
     crud("usuario",   
         {},
         "request"
@@ -73,7 +76,7 @@ router.post("/usuario", (req, res) => {
 // o primeiro objeto desse array é o body, e o segundo é um objeto com detalhes da solicitação para o sequelize.
 // Caso dúvida, busque sequelize.put na documentação do sequelize.
 // O método delete é semelhante. Há uma referência em Routes/mensagem
-router.put("/usuario", (req, res) => {
+router.put("/usuario",auth, (req, res) => {
         
         crud("usuario",   
         [
