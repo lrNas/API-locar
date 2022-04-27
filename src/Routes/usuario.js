@@ -60,7 +60,7 @@ router.post("/usuario", (req, res) => {
             data_nascimento: req.body.data_nascimento,
             cnh: req.body.cnh,
             validade_cnh: req.body.validade_cnh,
-            fk_id_tipo_usuario : req.body.id_tipo_usuario
+            fk_id_tipo_usuario : req.body.fk_id_tipo_usuario
         },
         "create"
     )
@@ -89,7 +89,7 @@ router.put("/usuario",auth, (req, res) => {
                 data_nascimento: req.body.data_nascimento,
                 cnh: req.body.cnh,
                 validade_cnh: req.body.validade_cnh,
-                fk_id_tipo_usuario : req.body.id_tipo_usuario
+                fk_id_tipo_usuario : req.body.fk_id_tipo_usuario
             },
             {where: { id: req.body.id}}
         ],
