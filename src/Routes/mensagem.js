@@ -2,9 +2,10 @@ const express = require('express')
 const router = express.Router()
 const crud = require("../Controllers/crud")
 const auth = require("../Middlewares/auth");
+const admin = require("../Middlewares/admin");
 
 
-router.get("/mensagem/:id",auth, (req, res) => {
+router.get("/mensagem/:id",auth,admin, (req, res) => {
     crud("mensagem",   
         {
             where: {
@@ -21,7 +22,7 @@ router.get("/mensagem/:id",auth, (req, res) => {
         })
 });
 
-router.get("/mensagem",auth, (req, res) => {
+router.get("/mensagem",auth,admin, (req, res) => {
     crud("mensagem",   
         {},
         "request"
@@ -52,7 +53,7 @@ router.post("/mensagem", (req, res) => {
 });
 // O método delete recebe somente o parãmetro where
 
-router.delete("/mensagem",auth, (req, res) => {
+router.delete("/mensagem",auth, admin, (req, res) => {
         
     crud("mensagem",   
     

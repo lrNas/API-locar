@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const crud = require("../Controllers/crud")
 const auth = require("../Middlewares/auth");
+const admin = require("../Middlewares/admin");
 
 
 router.get("/status/:id", (req, res) => {
@@ -34,7 +35,7 @@ router.get("/status", (req, res) => {
 });
 
 
-router.post("/status", auth, (req, res) => {
+router.post("/status", auth,admin, (req, res) => {
     crud("status",   
     
         {
@@ -50,7 +51,7 @@ router.post("/status", auth, (req, res) => {
     })
 });
 
-router.put("/status", auth, (req, res) => {
+router.put("/status", auth,admin, (req, res) => {
         
         crud("status",   
         [

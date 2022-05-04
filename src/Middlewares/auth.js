@@ -8,8 +8,7 @@ const auth = (req, res, next) => {
         .then(
             data=>{
                 if(data.length==1){
-                    req.auth = data[0].toJSON();
-                    console.log(req.auth);
+                    req.jwt = token;
                     next();
                 }
                 else{

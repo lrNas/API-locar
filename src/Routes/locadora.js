@@ -3,6 +3,9 @@ const router = express.Router()
 const crud = require("../Controllers/crud")
 const auth = require("../Middlewares/auth");
 
+// Instancia o middleware admin, que verifica se o user é admin para permitir fazer funções.
+const admin = require("../Middlewares/admin");
+
 
 router.get("/locadora/:id", (req, res) => {
     crud("locadora",   
@@ -38,7 +41,7 @@ router.get("/locadora", (req, res) => {
 
 
 
-router.post("/locadora",auth, (req, res) => {
+router.post("/locadora",auth, admin, (req, res) => {
     crud("locadora",   
         {
             nome: req.body.nome,
@@ -57,7 +60,7 @@ router.post("/locadora",auth, (req, res) => {
 });
 
 
-router.put("/locadora",auth, (req, res) => {
+router.put("/locadora",auth,admin, (req, res) => {
         
         crud("locadora",   
         [
@@ -80,7 +83,7 @@ router.put("/locadora",auth, (req, res) => {
     });
 
 
-    router.delete("/locadora",auth, (req, res) => {
+    router.delete("/locadora",auth,admin, (req, res) => {
         
         crud("locadora",   
         

@@ -11,10 +11,12 @@ const bcrypt = require("bcrypt")
 // Requer o controller Crud (abra-o, está comentado), para utilizar como método
 const crud = require("../Controllers/crud")
 
+// Requer o middleware admin, para verificar se o usuário tem privilégios de administrador
+const admin = require("../Middlewares/admin");
 //Define que a rota get vai executar o método crud com os parâmetros informados. 
 // Em caso de dúvida, leia o arquivo crud em Controllers/crud para saber como ele funciona.
 // os parâmetros que serão passados são obtidos na request.
-router.get("/usuario/:id", (req, res) => {
+router.get("/usuario/:id",auth,admin,  (req, res) => {
     crud("usuario",   
         {
             where: {
@@ -36,7 +38,7 @@ router.get("/usuario/:id", (req, res) => {
 });
 
 //Outro get, funciona como o acima
-router.get("/usuario",auth, (req, res) => {
+router.get("/usuario",auth,admin, (req, res) => {
     crud("usuario",   
         {},
         "request"

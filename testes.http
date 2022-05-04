@@ -15,7 +15,7 @@ POST http://localhost:3030/tipo
 Content-Type: application/json
 
 {
-    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjIwODI4OWMwLWNiNTQtMTFlYy05NDUzLTI3YzkzNWZmMDI1MSIsImlkIjoxLCJub21lX2NvbXBsZXRvIjoiQWRtaW5pc3RyYWRvciIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjMyMjcyfQ.GEsF0NzKLbmKDhqYkxG61RpNrXP8DS9RswAfUVghmu0",
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjMwYTg3MTAwLWNiNmEtMTFlYy1hOWY2LWM3MjAwN2RkMDZiNSIsImlkIjoxLCJub21lX2NvbXBsZXRvIjoiQWRtaW5pc3RyYWRvciIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQxNzQ4fQ.vWk9rOXHxfzfXmwauUmA_lIpgdX8Alotbhu7hdeVGf4",
     "descricao":"Administrador"
 }
 

@@ -5,6 +5,7 @@ const crud = require("../Controllers/crud");
 /* Instancia o middleware auth, que checa se o token enviado existe na base de dados */
 const auth = require("../Middlewares/auth");
 
+
 router.get("/cartao/usuario/:id",auth, (req, res) => {
     crud("cartao",   
         {
