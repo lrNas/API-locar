@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "P4ssw0rd." ,
+    "password": "123123" ,
     "database": "dhlocar",
     "host": "127.0.0.1",
     "dialect": "mysql",

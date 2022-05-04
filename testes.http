@@ -235,7 +235,7 @@ Content-Type: application/json
 {
     "nome_completo": "Carinha",
     "email": "email@email.com",
-    "senha": "senha",
+    "senha": "asdasd",
     "cpf": "00000000000",
     "telefone": "1123320232",
     "data_nascimento": "2022-03-28T23:08:13.145Z",
