@@ -1,20 +1,29 @@
 
+const jwt = require("jsonwebtoken")
 const crud = require("../Controllers/crud")
 const auth = (req, res, next) => {
-    
-    crud("auth",{where:{token:req.body.token}},"request")
-    .then(
-        data=>{
-            if(data.length==1){
-                req.auth = data[0].toJSON();
-                console.log(req.auth)
-                next();
+    try{
+        let token = jwt.verify(req.body.token,"secretsupersecret");
+        let auth = token.token;
+       crud("auth",{where:{token:auth}},"request")
+        .then(
+            data=>{
+                if(data.length==1){
+                    req.auth = data[0].toJSON();
+                    console.log(req.auth)
+                    next();
+                }
+                else{
+                    res.status(400).json({message:"Autenticador inválido."})
+                }
             }
-            else{
-                res.status(400).json({message:"Autenticador inválido."})
-            }
-        }
-    )
+        )
+    }
+    catch (error) {
+        res.status(400).json({message:"Token inválido."})
+    }
+        
+        
 
 }
 
