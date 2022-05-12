@@ -15,7 +15,7 @@ POST http://localhost:3030/tipo
 Content-Type: application/json
 
 {
-    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjMwYTg3MTAwLWNiNmEtMTFlYy1hOWY2LWM3MjAwN2RkMDZiNSIsImlkIjoxLCJub21lX2NvbXBsZXRvIjoiQWRtaW5pc3RyYWRvciIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQxNzQ4fQ.vWk9rOXHxfzfXmwauUmA_lIpgdX8Alotbhu7hdeVGf4",
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImQ2YTRkMzEwLWNiNmUtMTFlYy05NWFmLTMzZGVlOWEzNzAwOCIsImlkIjoxLCJub21lX2NvbXBsZXRvIjoiQ2FyaW5oYSIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6MiwiaWF0IjoxNjUxNjQzNzQ1fQ.fg_s9Om3jfiqkt9BwhGge_l1po3QOsm-XFVXqvIkfL4",
     "descricao":"Administrador"
 }
 
@@ -234,14 +234,14 @@ Content-Type: application/json
 
 {
     "nome_completo": "Carinha",
-    "email": "email@email.com",
-    "senha": "asdasd",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImYzYTU0MDkwLWNiNmQtMTFlYy05NWFmLTMzZGVlOWEzNzAwOCIsImlkIjo1LCJub21lX2NvbXBsZXRvIjoiQ2FyaW5oYSIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQzMzY0fQ.fjxZt5u8-5zNIjsNP1aVsf94yM1cYBTr9RDp6boccNk",
+    "senha": "senha",
     "cpf": "00000000000",
     "telefone": "1123320232",
     "data_nascimento": "2022-03-28T23:08:13.145Z",
     "cnh": "001241241241243",
     "validade_cnh": "2022-03-28T23:08:13.145Z",
-    "fk_id_tipo_usuario" : 1
+    "fk_id_tipo_usuario" : 2
 }
 
 #############
@@ -250,6 +250,7 @@ PUT http://localhost:3030/usuario
 Content-Type: application/json
 
 {
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjMwYTg3MTAwLWNiNmEtMTFlYy1hOWY2LWM3MjAwN2RkMDZiNSIsImlkIjoxLCJub21lX2NvbXBsZXRvIjoiQWRtaW5pc3RyYWRvciIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQxNzQ4fQ.vWk9rOXHxfzfXmwauUmA_lIpgdX8Alotbhu7hdeVGf4",
     "id":1,
             "nome_completo": "Carinha",
             "email": "email@email.com",
@@ -259,15 +260,18 @@ Content-Type: application/json
             "data_nascimento": "2022-03-28T23:08:13.145Z",
             "cnh": "001241241241243",
             "validade_cnh": "2022-03-28T23:08:13.145Z",
-            "fk_id_tipo_usuario" : 1
+            "fk_id_tipo_usuario" : 2
 }
 
 #############
 
 
 
-GET http://localhost:3030/reserva/usuario/1
+GET http://localhost:3030/usuario/
 Content-Type: application/json
+
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjQ5NWRkNTEwLWNiNmUtMTFlYy05NWFmLTMzZGVlOWEzNzAwOCIsImlkIjo1LCJub21lX2NvbXBsZXRvIjoiQ2FyaW5oYSIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQzNTA4fQ._DMmUXRIVTnuXyzE6ldgLdsS3-xUvPScxmmt5oWyZQM"}
+
 
 
 #############

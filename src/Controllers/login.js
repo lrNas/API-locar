@@ -54,17 +54,18 @@ const login = (req, res) => {
                                                 // Converte o resultado para Json
                                                 data = JSON.parse(JSON.stringify(data))[0];
                                                 // Cria uma payload para o JWT
+                                                let tipo = data.fk_id_tipo_usuario; 
+                                                let nomeusuario = data.nome_completo;
                                                 let payload = { token: newtoken,
                                                     id: data.id, 
-                                                    nome_completo:data.nome_completo,
                                                     email:data.email,
-                                                    role:data.fk_id_tipo_usuario 
+                                                    
                                                 }
                                                 
                                                 // Armazena os dados úteis do usuário em um JWT
-                                                let conteudo = jwt.sign(payload, "secretsupersecret")
+                                                let token = jwt.sign(payload, "secretsupersecret")
                                                 // Envia o JWT, que deve ser enviado para todas as requisições logadas
-                                                res.status(200).json(conteudo)
+                                                res.status(200).json({tipo,token,nomeusuario})
                                             }
                                         )
                                         .catch(err => {
