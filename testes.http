@@ -233,9 +233,9 @@ POST http://localhost:3030/usuario
 Content-Type: application/json
 
 {
-    "nome_completo": "Carinha",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImYzYTU0MDkwLWNiNmQtMTFlYy05NWFmLTMzZGVlOWEzNzAwOCIsImlkIjo1LCJub21lX2NvbXBsZXRvIjoiQ2FyaW5oYSIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQzMzY0fQ.fjxZt5u8-5zNIjsNP1aVsf94yM1cYBTr9RDp6boccNk",
+    "nome_completo": "Fulano de Tal",
     "senha": "senha",
+    "email": "email@email.com",
     "cpf": "00000000000",
     "telefone": "1123320232",
     "data_nascimento": "2022-03-28T23:08:13.145Z",
@@ -317,6 +317,21 @@ Content-Type: application/json
     "data_retirada":  "2022-03-28T23:08:13.145Z",
     "data_entrega": "2022-04-29T23:08:13.145Z",
     "valor": 3200.21
+}
+
+#############
+
+
+GET http://localhost:3030/busca
+Content-Type: application/json
+
+{
+    "data_retirada":"4000-01-01 00:00:00Z",
+    "data_entrega":"4500-01-01 00:00:00Z",
+    "cidade_origem":"São Paulo",
+    "cidade_destino":"São Paulo",
+    "estado_origem":"São Paulo",
+    "estado_destino":"São Paulo"
 }
 
 #############

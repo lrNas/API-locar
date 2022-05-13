@@ -15,8 +15,10 @@ const tipo = require( "./src/Routes/tipo");
 const status = require( "./src/Routes/status");
 const locadora = require( "./src/Routes/locadora");
 const reserva = require( "./src/Routes/reserva");
+const busca = require( "./src/Routes/busca");
 const usuario = require( "./src/Routes/usuario");
 app.use(login);
+app.use(busca);
 app.use(endereco);
 app.use(mensagem);
 app.use(veiculo);
@@ -25,6 +27,7 @@ app.use(status);
 app.use(locadora);
 app.use(reserva);
 app.use(usuario);
+
 
 // const validaCnh = require("./src/Middlewares/validaCnh");
 // app.use(validaCnh); Ative quando estiver pronto
