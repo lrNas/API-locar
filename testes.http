@@ -321,19 +321,19 @@ Content-Type: application/json
 
 #############
 
-
+###################
 GET http://localhost:3030/busca
 Content-Type: application/json
 
 {
-    "data_retirada":"4000-01-01 00:00:00Z",
-    "data_entrega":"4500-01-01 00:00:00Z",
+    "data_retirada":"2000-01-01 00:00:00Z",
+    "data_entrega":"2999-01-01 00:00:00Z",
     "cidade_origem":"São Paulo",
     "cidade_destino":"São Paulo",
     "estado_origem":"São Paulo",
     "estado_destino":"São Paulo"
 }
-
+##############################
 #############
 
 
