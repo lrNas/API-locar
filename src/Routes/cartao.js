@@ -6,7 +6,8 @@ const crud = require("../Controllers/crud");
 const auth = require("../Middlewares/auth");
 
 
-router.get("/cartao/usuario/:id",auth, (req, res) => {
+// Post pois get não permite passagem de body pelo axios */
+router.post("/cartao/usuario/:id",auth, (req, res) => {
     crud("cartao",   
         {
             where: {
