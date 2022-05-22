@@ -26,7 +26,7 @@ module.exports = {
     await queryInterface.bulkInsert('locadoras', [{
       nome: "Ag. 01 SP - Consolação",
       email: "ag01@locar.com",
-      cnpj: "00000000000000",
+      cnpj: "912481240259302",
       telefone: "1151239140",
       createdAt: now,
       updatedAt: now
@@ -34,7 +34,7 @@ module.exports = {
     {
       nome: "Ag. 02 SP - Santos",
       email: "ag02@locar.com",
-      cnpj: "00000000000000",
+      cnpj: "819024839402930",
       telefone: "1154002938",
       createdAt: now,
       updatedAt: now
@@ -42,16 +42,16 @@ module.exports = {
     {
       nome: "Ag. 03 RJ- Copacabana",
       email: "ag03@locar.com",
-      cnpj: "00000000000000",
-      telefone: "1154002938",
+      cnpj: "912041918524923",
+      telefone: "2129543800",
       createdAt: now,
       updatedAt: now
     },
     {
       nome: "Ag. 04 MG - Três Corações",
       email: "ag04@locar.com",
-      cnpj: "00000000000000",
-      telefone: "1154002938",
+      cnpj: "928459128192412",
+      telefone: "3140093528",
       createdAt: now,
       updatedAt: now
     }], {});
@@ -132,7 +132,7 @@ module.exports = {
       placa: "MFK-3K19",
       km_rodados: 0,
       custo_diaria: 45.59,
-      renavam: "00000000000",
+      renavam: "99283019293",
       fk_id_locadora_proprietaria: 2,
       fk_id_locadora_atual: 2,
       fk_id_status_veiculo: 1,
@@ -144,7 +144,7 @@ module.exports = {
       placa: "UNO-3K19",
       km_rodados: 0,
       custo_diaria: 86.49,
-      renavam: "00000000000",
+      renavam: "90292411220",
       fk_id_locadora_proprietaria: 3,
       fk_id_locadora_atual: 3,
       fk_id_status_veiculo: 1,
@@ -156,7 +156,7 @@ module.exports = {
       placa: "ORK-549O",
       km_rodados: 0,
       custo_diaria: 50.59,
-      renavam: "00000000000",
+      renavam: "02924119220",
       fk_id_locadora_proprietaria: 4,
       fk_id_locadora_atual: 4,
       fk_id_status_veiculo: 1,
@@ -220,8 +220,8 @@ module.exports = {
         fk_id_usuario: 2,
         fk_id_local_retirada: 3,
         fk_id_local_entrega: 3,
-        data_retirada: "2022-06-01T20:00:00.000Z",
-        data_entrega: "2022-06-10T20:00:00.000Z",
+        data_retirada: new Date("2022-06-01T20:00:00.000Z"),
+        data_entrega: new Date("2022-06-10T20:00:00.000Z"),
         valor: 2500.11,
         createdAt: now,
         updatedAt: now
@@ -231,8 +231,8 @@ module.exports = {
         fk_id_usuario: 2,
         fk_id_local_retirada: 2,
         fk_id_local_entrega: 2,
-        data_retirada: "2022-07-01T20:00:00.000Z",
-        data_entrega: "2022-07-10T20:00:00.000Z",
+        data_retirada: new Date("2022-07-01T20:00:00.000Z"),
+        data_entrega: new Date("2022-07-10T20:00:00.000Z"),
         valor: 1402.98,
         createdAt: now,
         updatedAt: now
@@ -241,8 +241,8 @@ module.exports = {
         fk_id_usuario: 2,
         fk_id_local_retirada: 4,
         fk_id_local_entrega: 4,
-        data_retirada: "2022-08-01T20:00:00.000Z",
-        data_entrega: "2022-08-10T20:00:00.000Z",
+        data_retirada: new Date("2022-08-01T20:00:00.000Z"),
+        data_entrega:new Date( "2022-08-10T20:00:00.000Z"),
         valor: 2400.98,
         createdAt: now,
         updatedAt: now
@@ -251,8 +251,8 @@ module.exports = {
         fk_id_usuario: 2,
         fk_id_local_retirada: 5,
         fk_id_local_entrega: 4,
-        data_retirada: "2022-09-01T20:00:00.000Z",
-        data_entrega: "2022-09-10T20:00:00.000Z",
+        data_retirada: new Date("2022-09-01T20:00:00.000Z"),
+        data_entrega: new Date("2022-09-10T20:00:00.000Z"),
         valor: 2600.98,
         createdAt: now,
         updatedAt: now
