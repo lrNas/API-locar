@@ -20,6 +20,40 @@ router.get("/endereco/:id", (req, res) => {
         })
 });
 
+router.get("/endereco/user/:id", (req, res) => {
+    crud("endereco",   
+        {
+            where: {
+                fk_id_usuario: req.params.id
+            }
+        },
+        "request"
+    )
+    .then(data=>res.status(200).json(data)
+    )
+    .catch(err=>
+        {
+            res.status(400).json(err)
+        })
+});
+
+router.get("/endereco/locadora/:id", (req, res) => {
+    crud("endereco",   
+        {
+            where: {
+                fk_id_locadora: req.params.id
+            }
+        },
+        "request"
+    )
+    .then(data=>res.status(200).json(data)
+    )
+    .catch(err=>
+        {
+            res.status(400).json(err)
+        })
+});
+
 
 router.post("/endereco", (req, res) => {
     crud("endereco",   

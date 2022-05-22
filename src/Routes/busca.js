@@ -7,7 +7,7 @@ const Op = Sequelize.Op;
 // repetir para todas as reservas
 
 
-router.get("/busca", async (req, res) => {
+router.post("/busca", async (req, res) => {
 
     let cidade_origem = `%${req.body.cidade_origem}%`
     let estado_origem = `%${req.body.estado_origem}%`

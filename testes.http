@@ -22,7 +22,7 @@ Content-Type: application/json
 #############
 ####Requisição do arquivo de busca
 ###################
-GET http://localhost:3030/busca
+POST http://localhost:3030/busca
 Content-Type: application/json
 
 {
