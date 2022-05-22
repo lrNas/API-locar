@@ -6,7 +6,7 @@ POST http://localhost:3030/login
 Content-Type: application/json
 
 {
-    "email": "admin@email.com",
+    "email": "admin@admin.com",
     "senha": "senha"
 }
 
@@ -137,7 +137,7 @@ Content-Type: application/json
 
 #############
 
-GET http://localhost:3030/status/
+GET http://localhost:3030/locadora
 Content-Type: application/json
 
 #############
@@ -266,7 +266,7 @@ PUT http://localhost:3030/usuario
 Content-Type: application/json
 
 {
-    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjMwYTg3MTAwLWNiNmEtMTFlYy1hOWY2LWM3MjAwN2RkMDZiNSIsImlkIjoxLCJub21lX2NvbXBsZXRvIjoiQWRtaW5pc3RyYWRvciIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQxNzQ4fQ.vWk9rOXHxfzfXmwauUmA_lIpgdX8Alotbhu7hdeVGf4",
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImRmN2Y3OGYwLWRhMWUtMTFlYy1hZDk4LTA5OGFkNTdlMTZhNSIsImlkIjoyLCJlbWFpbCI6Im1hcmN1c0BtYXJjdXMuY29tIiwiaWF0IjoxNjUzMjU4NjY3fQ.Ap6GYUI615xqMuql9PiSTfjJmv8rTfEgecqesiL3N0s",
     "id":1,
             "nome_completo": "Carinha",
             "email": "email@email.com",
