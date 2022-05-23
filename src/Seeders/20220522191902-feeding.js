@@ -14,7 +14,7 @@ module.exports = {
         senha: "$2b$06$wlJwrKMjKu9jtoL1Lort.uCfyu5U7Qf2STBJg8MnTCKp5eShN5MwG",
         cpf: "20039124023",
         telefone: "11922232304",
-        data_nascimento: "1990-01-01T00:00:00.000Z",
+        data_nascimento: new Date("1990-01-01T00:00:00.000Z"),
         cnh: "101241241241243",
         validade_cnh: future,
         fk_id_tipo_usuario: 2,
@@ -40,7 +40,7 @@ module.exports = {
       updatedAt: now
     },
     {
-      nome: "Ag. 03 RJ- Copacabana",
+      nome: "Ag. 03 RJ - Copacabana",
       email: "ag03@locar.com",
       cnpj: "912041918524923",
       telefone: "2129543800",
@@ -70,8 +70,8 @@ module.exports = {
         cep: "05823-450",
         logadouro: "Rua da Olaria, 123",
         complemento: "CJ1",
-        estado: "Santos",
-        cidade: "São Paulo",
+        estado: "São Paulo",
+        cidade: "Santos",
         fk_id_locadora: 3,
         createdAt: now,
         updatedAt: now
@@ -97,8 +97,8 @@ module.exports = {
         cep: "01230-110",
         logadouro: "Rua do Cafezal, 123",
         complemento: "",
-        estado: "Três Corações",
-        cidade: "Minas Gerais",
+        estado: "Minas Gerais",
+        cidade: "Três Corações",
         fk_id_locadora: 5,
         createdAt: now,
         updatedAt: now

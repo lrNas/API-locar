@@ -11,7 +11,7 @@ const Locadora = sequelize.define("locadoras",{
         primaryKey:true
     },
     nome: {
-        type:Sequelize.STRING(20),
+        type:Sequelize.STRING(50),
     },
     email: {
         type:Sequelize.STRING(50),
