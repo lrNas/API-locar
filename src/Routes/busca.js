@@ -15,10 +15,6 @@ router.post("/busca", async (req, res) => {
     let estado_destino = `%${req.body.estado_destino}%`
     let dataInicial = new Date(req.body.data_retirada)
     let dataFinal = new Date(req.body.data_entrega)
-    console.log(cidade_destino)
-    console.log(estado_destino)
-
-
 
     try {
         // Todos os endereços de origem
