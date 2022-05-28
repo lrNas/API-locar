@@ -283,7 +283,7 @@ Content-Type: application/json
 
 
 
-POST http://localhost:3030/usuario/1
+POST http://localhost:3030/usuario
 Content-Type: application/json
 
 {

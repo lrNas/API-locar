@@ -93,7 +93,9 @@ router.post("/usuario/:id",auth,(req, res) => {
 });
 //O post também funciona como o get, mas possui mais parâmetros.
 router.post("/usuario", (req, res) => {
-    let salt =bcrypt.hashSync(req.body.senha, Math.round(Math.random()*15));
+    
+    let salt=bcrypt.hashSync(req.body.senha, Math.round(Math.random()*15));
+
     crud("usuario",   
         {
             nome_completo: req.body.nome_completo,
