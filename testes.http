@@ -283,7 +283,7 @@ Content-Type: application/json
 
 
 
-GET http://localhost:3030/usuario/
+POST http://localhost:3030/usuario/
 Content-Type: application/json
 
 {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjQ5NWRkNTEwLWNiNmUtMTFlYy05NWFmLTMzZGVlOWEzNzAwOCIsImlkIjo1LCJub21lX2NvbXBsZXRvIjoiQ2FyaW5oYSIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQzNTA4fQ._DMmUXRIVTnuXyzE6ldgLdsS3-xUvPScxmmt5oWyZQM"}
