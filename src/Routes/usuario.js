@@ -26,7 +26,20 @@ router.post("/usuario/:id",auth,(req, res) => {
         "request"
     )
     .then(
-        data=>res.status(200).json(data)
+        data=>res.status(200).json(
+            {
+                "id": data.id,
+                "nome_completo": data.nome_completo,
+                "email": data.email,
+                "cpf": data.cpf,
+                "telefone": data.telefone,
+                "data_nascimento": data.data_nascimento,
+                "cnh": data.cnh,
+                "validade_cnh": data.validade_cnh,
+                "createdAt": data.createdAt,
+                "updatedAt": data.updatedAt,
+                "fk_id_tipo_usuario": data.fk_id_tipo_usuario
+              })
         // Após executar o método crud, retorna o Status e os dados que ele retornou.
     )
     .catch(err=>
@@ -43,7 +56,28 @@ router.post("/usuario/todos",auth,admin, (req, res) => {
         {},
         "request"
     )
-    .then(data=>res.status(200).json(data)
+    .then(data=>{
+        let dados = [];
+        for(item of data){
+            dados.push(
+                {
+                    "id": item.id,
+                    "nome_completo": item.nome_completo,
+                    "email": item.email,
+                    "cpf": item.cpf,
+                    "telefone": item.telefone,
+                    "data_nascimento": item.data_nascimento,
+                    "cnh": item.cnh,
+                    "validade_cnh": item.validade_cnh,
+                    "createdAt": item.createdAt,
+                    "updatedAt": item.updatedAt,
+                    "fk_id_tipo_usuario": item.fk_id_tipo_usuario
+                  }
+            )
+        }
+
+        res.status(200).json(dados)
+    }
     )
     .catch(err=>
         {
