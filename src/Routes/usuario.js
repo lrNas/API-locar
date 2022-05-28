@@ -16,7 +16,7 @@ const admin = require("../Middlewares/admin");
 //Define que a rota get vai executar o método crud com os parâmetros informados. 
 // Em caso de dúvida, leia o arquivo crud em Controllers/crud para saber como ele funciona.
 // os parâmetros que serão passados são obtidos na request.
-router.get("/usuario/:id",auth,admin,  (req, res) => {
+router.post("/usuario/:id",auth,admin,  (req, res) => {
     crud("usuario",   
         {
             where: {
@@ -38,7 +38,7 @@ router.get("/usuario/:id",auth,admin,  (req, res) => {
 });
 
 //Outro get, funciona como o acima
-router.get("/usuario",auth,admin, (req, res) => {
+router.post("/usuario/todos",auth,admin, (req, res) => {
     crud("usuario",   
         {},
         "request"
