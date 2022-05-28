@@ -287,8 +287,8 @@ POST http://localhost:3030/usuario/1
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjRiMjUxZGEwLWRlYTAtMTFlYy1iN2IzLTZkZDEyZjFhNDIyNiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjUzNzU0MDU4fQ.1zYdRYNE7-XozRp3T-SvFMNf7v1gNrkUz-iZoGBQUJY"
-    }    
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiI5ODY0MzE4MC1kZWI2LTExZWMtYjRlNy0zYmNlZmU3MTcwMzYiLCJlbWFpbCI6ImFkbWluQGVtYWlsLmNvbSIsImlhdCI6MTY1Mzc2MzYzNn0.f7usEG3tfbwJDudt47ikn1814nBxgp0K_Yrlt2ncmVE"
+}    
 
 
 #############

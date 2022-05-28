@@ -57,7 +57,8 @@ const login = (req, res) => {
                                                 let tipo = data.fk_id_tipo_usuario; 
                                                 let nomeusuario = data.nome_completo;
                                                 let id = data.id;
-                                                let payload = { token: newtoken,
+                                                let payload = { id:id,
+                                                    token: newtoken,
                                                     email:data.email,                                                    
                                                 }
                                                 

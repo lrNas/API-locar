@@ -1,5 +1,5 @@
 const admin = (req, res, next) => {
-    if(req.jwt.role ===1){
+    if(req.jwt.id ===1){
         next();
     }
     else{
