@@ -26,20 +26,7 @@ router.post("/usuario/:id",auth,(req, res) => {
         "request"
     )
     .then(
-        data=>res.status(200).json(
-            {
-                "id": data.id,
-                "nome_completo": data.nome_completo,
-                "email": data.email,
-                "cpf": data.cpf,
-                "telefone": data.telefone,
-                "data_nascimento": data.data_nascimento,
-                "cnh": data.cnh,
-                "validade_cnh": data.validade_cnh,
-                "createdAt": data.createdAt,
-                "updatedAt": data.updatedAt,
-                "fk_id_tipo_usuario": data.fk_id_tipo_usuario
-              })
+        data=>res.status(200).json(data)
         // Após executar o método crud, retorna o Status e os dados que ele retornou.
     )
     .catch(err=>

@@ -8,6 +8,7 @@ app.use(requestBody);
 
 /* Instancia e aplica ao app as rotas para cada controller. Vide Routes/usuario.js, essa rota estará comentada. */
 const login = require("./src/Routes/login");
+const cartao = require("./src/Routes/cartao");
 const endereco = require("./src/Routes/endereco");
 const mensagem = require("./src/Routes/mensagem");
 const veiculo = require("./src/Routes/veiculo");
@@ -17,6 +18,7 @@ const locadora = require( "./src/Routes/locadora");
 const reserva = require( "./src/Routes/reserva");
 const busca = require( "./src/Routes/busca");
 const usuario = require( "./src/Routes/usuario");
+app.use(cartao);
 app.use(login);
 app.use(busca);
 app.use(endereco);
