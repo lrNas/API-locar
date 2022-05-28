@@ -6,7 +6,7 @@ POST http://localhost:3030/login
 Content-Type: application/json
 
 {
-    "email": "admin@admin.com",
+    "email": "admin@email.com",
     "senha": "senha"
 }
 
@@ -283,11 +283,12 @@ Content-Type: application/json
 
 
 
-POST http://localhost:3030/usuario/
+POST http://localhost:3030/usuario/1
 Content-Type: application/json
 
-{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjQ5NWRkNTEwLWNiNmUtMTFlYy05NWFmLTMzZGVlOWEzNzAwOCIsImlkIjo1LCJub21lX2NvbXBsZXRvIjoiQ2FyaW5oYSIsImVtYWlsIjoiZW1haWxAZW1haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUxNjQzNTA4fQ._DMmUXRIVTnuXyzE6ldgLdsS3-xUvPScxmmt5oWyZQM"}
-
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjRiMjUxZGEwLWRlYTAtMTFlYy1iN2IzLTZkZDEyZjFhNDIyNiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjUzNzU0MDU4fQ.1zYdRYNE7-XozRp3T-SvFMNf7v1gNrkUz-iZoGBQUJY"
+    }    
 
 
 #############

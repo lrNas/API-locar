@@ -16,7 +16,7 @@ const admin = require("../Middlewares/admin");
 //Define que a rota get vai executar o método crud com os parâmetros informados. 
 // Em caso de dúvida, leia o arquivo crud em Controllers/crud para saber como ele funciona.
 // os parâmetros que serão passados são obtidos na request.
-router.post("/usuario/:id",auth,  (req, res) => {
+router.post("/usuario/:id",auth,(req, res) => {
     crud("usuario",   
         {
             where: {
@@ -52,11 +52,12 @@ router.post("/usuario/todos",auth,admin, (req, res) => {
 });
 //O post também funciona como o get, mas possui mais parâmetros.
 router.post("/usuario", (req, res) => {
+    let salt =bcrypt.hashSync(req.body.senha, Math.round(Math.random()*15));
     crud("usuario",   
         {
             nome_completo: req.body.nome_completo,
             email: req.body.email,
-            senha: bcrypt.hashSync(req.body.senha,Math.round(Math.random()*15)),
+            senha:salt ,
             cpf: req.body.cpf,
             telefone: req.body.telefone,
             data_nascimento: req.body.data_nascimento,
