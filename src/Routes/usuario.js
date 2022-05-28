@@ -17,7 +17,6 @@ const admin = require("../Middlewares/admin");
 // Em caso de dúvida, leia o arquivo crud em Controllers/crud para saber como ele funciona.
 // os parâmetros que serão passados são obtidos na request.
 
-
 //Outro get, funciona como o acima
 router.post("/usuario/todos",auth,admin, (req, res) => {
     crud("usuario",   
