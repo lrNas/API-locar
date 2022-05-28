@@ -23,7 +23,7 @@ router.post("/usuario/:id",auth,  (req, res) => {
                 id: req.params.id
             }
         },
-        "usuario"
+        "request"
     )
     .then(
         data=>res.status(200).json(data)
