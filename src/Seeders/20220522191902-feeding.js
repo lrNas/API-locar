@@ -123,7 +123,7 @@ module.exports = {
       renavam: "91929203874",
       fk_id_locadora_proprietaria: 5,
       fk_id_locadora_atual: 5,
-      fk_id_status_veiculo: 1,
+      fk_id_status_veiculo: 5,
       createdAt: now,
       updatedAt: now
     },
@@ -135,7 +135,7 @@ module.exports = {
       renavam: "99283019293",
       fk_id_locadora_proprietaria: 2,
       fk_id_locadora_atual: 2,
-      fk_id_status_veiculo: 1,
+      fk_id_status_veiculo: 5,
       createdAt: now,
       updatedAt: now
     },
@@ -147,7 +147,7 @@ module.exports = {
       renavam: "90292411220",
       fk_id_locadora_proprietaria: 3,
       fk_id_locadora_atual: 3,
-      fk_id_status_veiculo: 1,
+      fk_id_status_veiculo: 5,
       createdAt: now,
       updatedAt: now
     },
@@ -159,7 +159,7 @@ module.exports = {
       renavam: "02924119220",
       fk_id_locadora_proprietaria: 4,
       fk_id_locadora_atual: 4,
-      fk_id_status_veiculo: 1,
+      fk_id_status_veiculo: 5,
       createdAt: now,
       updatedAt: now
     },

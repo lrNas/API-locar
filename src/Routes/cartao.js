@@ -11,7 +11,7 @@ router.post("/cartao/usuario/:id",auth, (req, res) => {
     crud("cartao",   
         {
             where: {
-                fk_id_usuario: req.params.id_usuario
+                fk_id_usuario: req.params.id
             }
         },"request"
     )

@@ -16,17 +16,72 @@ const admin = require("../Middlewares/admin");
 //Define que a rota get vai executar o método crud com os parâmetros informados. 
 // Em caso de dúvida, leia o arquivo crud em Controllers/crud para saber como ele funciona.
 // os parâmetros que serão passados são obtidos na request.
-router.get("/usuario/:id",auth,admin,  (req, res) => {
+
+//Outro get, funciona como o acima
+router.post("/usuario/todos",auth,admin, (req, res) => {
+    crud("usuario",   
+        {},
+        "request"
+    )
+    .then(data=>{
+        let dados = [];
+        const dataJson = JSON.parse(JSON.stringify(data))
+        for(item of dataJson){
+            dados.push(
+                {
+                    "id": item.id,
+                    "nome_completo": item.nome_completo,
+                    "email": item.email,
+                    "cpf": item.cpf,
+                    "telefone": item.telefone,
+                    "data_nascimento": item.data_nascimento,
+                    "cnh": item.cnh,
+                    "validade_cnh": item.validade_cnh,
+                    "createdAt": item.createdAt,
+                    "updatedAt": item.updatedAt,
+                    "fk_id_tipo_usuario": item.fk_id_tipo_usuario
+                  }
+            )
+        }
+
+        res.status(200).json(dados)
+    }
+    )
+    .catch(err=>
+        {
+            res.status(400).json(err)
+        })
+});
+
+router.post("/usuario/:id",auth,(req, res) => {
     crud("usuario",   
         {
             where: {
                 id: req.params.id
             }
         },
-        "usuario"
+        "request"
     )
     .then(
-        data=>res.status(200).json(data)
+        data=>
+        {
+            const dataJson = JSON.parse(JSON.stringify(data))
+            const final = {
+                "id": dataJson[0].id,
+                "nome_completo": dataJson[0].nome_completo,
+                "email": dataJson[0].email,
+                "cpf": dataJson[0].cpf,
+                "telefone": dataJson[0].telefone,
+                "data_nascimento": dataJson[0].data_nascimento,
+                "cnh": dataJson[0].cnh,
+                "validade_cnh": dataJson[0].validade_cnh,
+                "createdAt": dataJson[0].createdAt,
+                "updatedAt": dataJson[0].updatedAt,
+                "fk_id_tipo_usuario": dataJson[0].fk_id_tipo_usuario
+            }
+
+            res.status(200).json(final)
+            }
         // Após executar o método crud, retorna o Status e os dados que ele retornou.
     )
     .catch(err=>
@@ -36,27 +91,16 @@ router.get("/usuario/:id",auth,admin,  (req, res) => {
 
         })
 });
-
-//Outro get, funciona como o acima
-router.get("/usuario",auth,admin, (req, res) => {
-    crud("usuario",   
-        {},
-        "request"
-    )
-    .then(data=>res.status(200).json(data)
-    )
-    .catch(err=>
-        {
-            res.status(400).json(err)
-        })
-});
 //O post também funciona como o get, mas possui mais parâmetros.
 router.post("/usuario", (req, res) => {
+    
+    let salt=bcrypt.hashSync(req.body.senha, Math.round(Math.random()*15));
+
     crud("usuario",   
         {
             nome_completo: req.body.nome_completo,
             email: req.body.email,
-            senha: bcrypt.hashSync(req.body.senha,Math.round(Math.random()*15)),
+            senha:salt ,
             cpf: req.body.cpf,
             telefone: req.body.telefone,
             data_nascimento: req.body.data_nascimento,
@@ -82,7 +126,7 @@ router.put("/usuario",auth, (req, res) => {
         
         crud("usuario",   
         [
-            {
+            {   
                 nome_completo: req.body.nome_completo,
                 email: req.body.email,
                 senha: bcrypt.hashSync(req.body.senha,Math.round(Math.random()*15)),

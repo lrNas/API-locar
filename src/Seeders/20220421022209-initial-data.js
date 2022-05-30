@@ -89,7 +89,7 @@ custo_diaria : 0.1,
 renavam : "00000000000",
 fk_id_locadora_proprietaria : 1,
 fk_id_locadora_atual : 1,
-fk_id_status_veiculo : 1,
+fk_id_status_veiculo : 3,
 createdAt: now,
 updatedAt: now
 }], {});

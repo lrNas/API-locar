@@ -3,7 +3,7 @@ const router = express.Router()
 const crud = require("../Controllers/crud")
 const auth = require("../Middlewares/auth");
 
-router.get("/reserva/usuario/:id",auth, (req, res) => {
+router.get("/reserva/usuario/:id", (req, res) => {
     crud("reserva",   
         {
             where: {
@@ -21,7 +21,7 @@ router.get("/reserva/usuario/:id",auth, (req, res) => {
 });
 
 
-router.get("/reserva/:id",auth, (req, res) => {
+router.get("/reserva/:id", (req, res) => {
     crud("reserva",   
         {
             where: {
