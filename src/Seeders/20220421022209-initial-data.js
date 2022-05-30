@@ -3,8 +3,8 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     let now = new Date(Date.now());
-    let future = new Date("2999-01-01T00:00:00.000Z");
-    let past = new Date("2000-01-01T00:00:00.000Z");
+    let future = new Date("2999-01-01T00:00:00.000-03:00");
+    let past = new Date("2000-01-01T00:00:00.000-03:00");
     //
     await queryInterface.bulkInsert('tipo_usuarios', [
       {descricao: 'Administrador',

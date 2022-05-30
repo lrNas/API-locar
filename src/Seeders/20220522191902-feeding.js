@@ -3,8 +3,8 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     let now = new Date(Date.now());
-    let future = new Date("2999-01-01T00:00:00.000Z");
-    let past = new Date("2000-01-01T00:00:00.000Z");
+    let future = new Date("2999-01-01T00:00:00.000-03:00");
+    let past = new Date("2000-01-01T00:00:00.000-03:00");
 
     // Senha: "senha"
     await queryInterface.bulkInsert('usuarios', [
@@ -14,7 +14,7 @@ module.exports = {
         senha: "$2b$06$wlJwrKMjKu9jtoL1Lort.uCfyu5U7Qf2STBJg8MnTCKp5eShN5MwG",
         cpf: "20039124023",
         telefone: "11922232304",
-        data_nascimento: new Date("1990-01-01T00:00:00.000Z"),
+        data_nascimento: new Date("1990-01-01T00:00:00.000-03:00"),
         cnh: "101241241241243",
         validade_cnh: future,
         fk_id_tipo_usuario: 2,
@@ -220,8 +220,8 @@ module.exports = {
         fk_id_usuario: 2,
         fk_id_local_retirada: 3,
         fk_id_local_entrega: 3,
-        data_retirada: new Date("2022-06-01T20:00:00.000Z"),
-        data_entrega: new Date("2022-06-10T20:00:00.000Z"),
+        data_retirada: new Date("2022-06-01T20:00:00.000-03:00"),
+        data_entrega: new Date("2022-06-10T20:00:00.000-03:00"),
         valor: 2500.11,
         createdAt: now,
         updatedAt: now
@@ -231,8 +231,8 @@ module.exports = {
         fk_id_usuario: 2,
         fk_id_local_retirada: 2,
         fk_id_local_entrega: 2,
-        data_retirada: new Date("2022-07-01T20:00:00.000Z"),
-        data_entrega: new Date("2022-07-10T20:00:00.000Z"),
+        data_retirada: new Date("2022-07-01T20:00:00.000-03:00"),
+        data_entrega: new Date("2022-07-10T20:00:00.000-03:00"),
         valor: 1402.98,
         createdAt: now,
         updatedAt: now
@@ -241,8 +241,8 @@ module.exports = {
         fk_id_usuario: 2,
         fk_id_local_retirada: 4,
         fk_id_local_entrega: 4,
-        data_retirada: new Date("2022-08-01T20:00:00.000Z"),
-        data_entrega:new Date( "2022-08-10T20:00:00.000Z"),
+        data_retirada: new Date("2022-08-01T20:00:00.000-03:00"),
+        data_entrega:new Date( "2022-08-10T20:00:00.000-03:00"),
         valor: 2400.98,
         createdAt: now,
         updatedAt: now
@@ -251,8 +251,8 @@ module.exports = {
         fk_id_usuario: 2,
         fk_id_local_retirada: 5,
         fk_id_local_entrega: 4,
-        data_retirada: new Date("2022-09-01T20:00:00.000Z"),
-        data_entrega: new Date("2022-09-10T20:00:00.000Z"),
+        data_retirada: new Date("2022-09-01T20:00:00.000-03:00"),
+        data_entrega: new Date("2022-09-10T20:00:00.000-03:00"),
         valor: 2600.98,
         createdAt: now,
         updatedAt: now
@@ -260,7 +260,7 @@ module.exports = {
     ], {});
   }
   // ,
-  // async down (queryInterface, Sequelize) {
+  // async down (queryInterface, Sequeli-03:00e) {
   //   /**
   //    * Add commands to revert seed here.
   //    *
