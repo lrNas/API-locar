@@ -126,7 +126,7 @@ router.put("/usuario",auth, (req, res) => {
         
         crud("usuario",   
         [
-            {
+            {   
                 nome_completo: req.body.nome_completo,
                 email: req.body.email,
                 senha: bcrypt.hashSync(req.body.senha,Math.round(Math.random()*15)),
