@@ -36,6 +36,9 @@ router.get("/mensagem",auth,admin, (req, res) => {
 });
 
 router.post("/mensagem", (req, res) => {
+    if(req.body.email==""||req.body.nome_completo==""||req.body.conteudo==""){
+        res.status(400).json(err)
+    }
     crud("mensagem",   
         {
             nome_completo: req.body.nome_completo,
