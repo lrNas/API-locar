@@ -1,0 +1,38 @@
+
+
+############# Login
+
+POST http://localhost:3030/login
+Content-Type: application/json
+
+{
+    "email": "admin@email.com",
+    "senha": "senha"
+}
+
+####Requisição da payload de busca
+###################
+POST http://localhost:3030/busca
+Content-Type: application/json
+
+{
+    "data_retirada":"2022-05-23T00:00:00Z",
+    "data_entrega":"2022-06-25T00:00:00Z",
+    "cidade_origem":"Rio de Janeiro",
+    "cidade_destino":"São Paulo",
+    "estado_origem":"Rio de Janeiro",
+    "estado_destino":"São Paulo"
+}
+
+
+#### Cadastro da Locadora
+POST http://localhost:3030/locadora
+Content-Type: application/json
+
+{
+"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidG9rZW4iOiJkMTM5OTdjMC1lMTE4LTExZWMtYWMyMy0xYjgzOTYxOTVlYTIiLCJlbWFpbCI6ImFkbWluQGVtYWlsLmNvbSIsImlhdCI6MTY1NDAyNTcyNX0.HkNJaH0iEfKS7QP0wXZ3smuCA0jWGKpfJ-SWXGQ8gsE",
+"nome":"Ag. 01 - SP",
+"email":"ag01sp@locar.com",
+"cnpj":"00000000000000",
+"telefone" :"21 55322342"
+}
